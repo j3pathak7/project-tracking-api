@@ -3,7 +3,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const rateLimit = require("express-rate-limit");
 const routes = require("./routes");
-const config = require("./config");
 const middlewares = require("./middlewares");
 
 const app = express();
@@ -20,7 +19,7 @@ app.use(limiter);
 
 // Connect to MongoDB
 mongoose
-  .connect(process.env.MONGO_URI, config.mongooseOptions)
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("Error connecting to MongoDB:", err));
 
