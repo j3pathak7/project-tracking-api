@@ -1,12 +1,14 @@
 {
   "name": "product-tracking",
   "version": "1.0.0",
-  "description": "",
+  "description": "A RESTful API for tracking the status and location of products through various stages such as manufacturing, shipping, and delivery. Provides user authentication, role-based access control, and email notifications for status updates.",
   "main": "src/app.js",
   "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Your Name",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -17,5 +19,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.4.0",
     "nodemailer": "^6.9.13"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }
